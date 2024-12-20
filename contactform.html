@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PentateQ - Contact Us</title>
+    <style>
+        :root {
+            --primary-blue: #4B0082;
+            --text-dark: #1a1a1a;
+            --bg-color: #f8f8f8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .contact-container {
+            background: white;
+            border-radius: 24px;
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-section {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-section img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .form-section {
+            flex: 1;
+            padding: 40px;
+            background: white;
+        }
+
+        .form-section h1 {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .input-group label {
+            display: block;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 8px 0;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            outline: none;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            border-bottom-color: var(--primary-blue);
+        }
+
+        button {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 24px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #380062;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+        }
+
+        .contact-info p {
+            color: #333;
+            margin: 8px 0;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: var(--primary-blue);
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #380062;
+        }
+
+        /* Success/Error Messages */
+        .message {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .success {
+            background: #d4edda;
+            color: #155724;
+            display: block;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .logo-section {
+                padding: 30px;
+            }
+
+            .form-section {
+                padding: 30px;
+            }
+
+            .logo-section img {
+                max-width: 200px;
+            }
+
+            .form-section h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-section {
+                padding: 20px;
+            }
+
+            .form-section {
+                padding: 20px;
+            }
+
+            .form-section h1 {
+                font-size: 1.8rem;
+            }
+
+            .social-links {
+                gap: 15px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="contact-container">
+        <div class="logo-section">
+            <img src="pentateq-logo.jpg" alt="PentateQ Logo">
+        </div>
+        <div class="form-section">
+            <h1>Contact Us</h1>
+            
+            <div id="message" class="message"></div>
+            
+            <form id="contactForm" action="process_contact.php" method="POST">
+                <div class="input-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="3" required></textarea>
+                </div>
+                
+                <button type="submit">Contact Us</button>
+            </form>
+            
+            <div class="contact-info">
+                <p><strong>Contact:</strong> pentateqco@gmail.com</p>
+                <p><strong>Based in:</strong> Blantyre, Malawi</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch('process_contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const messageDiv = document.getElementById('message');
+                messageDiv.textContent = data.message;
+                messageDiv.className = `message ${data.status}`;
+                
+                if(data.status === 'success') {
+                    this.reset();
+                }
+            })
+            .catch(error => {
+                document.getElementById('message').textContent = 'An error occurred. Please try again.';
+                document.getElementById('message').className = 'message error';
+            });
+        });
+    </script>
+</body>
+</html>
