@@ -1,0 +1,2 @@
+purple = HEX: 5215ae
+blue = HEX: 2e63ef
