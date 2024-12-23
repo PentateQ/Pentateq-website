@@ -1,0 +1,268 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.wrapper{
+    width: 100%;
+    height: 155vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/bg.png);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-position: bottom;
+    /* background-color: blue; */
+}
+nav{
+    height: 10%;
+    /* background: green; */
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.logo{
+    position: relative;
+    bottom: 5%;
+    /* transform: translate(-50%); */
+    width: 20%;
+    margin-left: 40%;
+    /* display: flex;
+    align-self: center;
+    justify-self: center; */
+}
+nav button{
+    margin: .5rem;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    color: #5215ae;
+    box-shadow: 2px 2px 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: ease;
+}
+nav button:hover{
+    width: 4rem;
+    border-radius: 10px;
+}
+.cover{
+    width: 85%;
+    height: 40%;
+    max-height: 40%;
+    /* margin-top: 1%; */
+    align-self: center;
+    justify-self: center;
+    background: white;
+    box-shadow: grey 10px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+.cover .gear{
+  height: 30%;
+  animation: spin 3s linear infinite  forwards;
+}
+.service-cover{
+    height: 100%;
+}
+.services-list{
+    position: relative;
+    top: -8.5%;
+    width: 80%;
+    height: 50rem;
+    /* margin-top: 2%; */
+    align-self: center;
+    justify-self: center;
+    background:  transparent;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.service{
+    height: 50%;
+    width: 25%;
+    background-color: white;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2%;
+}
+.service img{
+    width: 20%;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.service a{
+    position: relative;
+    margin-top: 5%;
+    text-decoration: none;
+    font-size: 1.25rem;
+    animation: float .75s ease-in-out infinite;
+    }
+h1{
+    color: purple;
+}
+p{
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .wrapper{
+        width: 100%;
+        height: 155vh;
+        display: flex;
+        flex-direction: column;
+        background-image: none;
+        background-repeat: no-repeat;
+         background-size: cover; 
+        background-position: bottom;
+        /* background-color: blue;  */
+    }
+    nav{
+        height: 10%;
+        /* background: green; */
+        /* overflow: hidden; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .logo{
+        position: relative;
+        bottom: 5%;
+        /* transform: translate(-50%); */
+        width: 40%;
+        margin-left: 30%;
+        /* display: flex;
+        align-self: center;
+        justify-self: center; */
+    }
+    nav button{
+        margin: .5rem;
+        width: 3rem;
+        height: 3rem;
+        border: none;
+        color: #5215ae;
+        box-shadow: 2px 2px 2px;
+        background-color: white;
+        border-radius: 50%;
+        transition: ease;
+    }
+    nav button:hover{
+        width: 4rem;
+        border-radius: 10px;
+    }
+    .cover{
+        width: 350px;
+        height: 40%;
+        max-height: 40%;
+        /* margin-top: 1%; */
+        align-self: center;
+        justify-self: center;
+        background: white;
+        box-shadow: grey 5px 5px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 10px;
+    }
+    .cover .gear{
+      height: 30px;
+      animation: spin 3s linear infinite  forwards;
+    }
+    .cover #gear2{
+        display: none;
+    }
+    .service-cover{
+        height: 250px;
+    }
+    .services-list{
+        position: relative;
+        top: -5%;
+        width: 80%;
+        height: 50rem;
+        /* margin-top: 2%; */
+        align-self: center;
+        justify-self: center;
+        background:  transparent;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .service{
+        height: 50%;
+        width: 90%;
+        background-color: white;
+        border-radius: 10px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: purple;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2%;
+    }
+    .service img{
+        width: 20%;
+        border-radius: 50%;
+        margin-top: 5px;
+    }
+    .service a{
+        position: relative;
+        margin-top: 5%;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: bold;
+        animation: float .75s ease-in-out infinite;
+        }
+    p{
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-top: 10px;
+        font-size: 1.5rem;
+        font-family: sans-serif;
+    }
+    
+    
+}
+
+
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+        rotate: 0deg;
+    }
+    to{
+        transform: rotate(360);
+        rotate: 360deg;
+    }
+    
+}
+@keyframes float {
+    from {
+        left: 0;
+    }
+    to{
+        left: 5px;
+    }
+    
+}
