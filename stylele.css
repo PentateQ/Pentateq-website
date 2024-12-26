@@ -1,0 +1,117 @@
+/* stylele.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+nav ul li {
+  font-size: 16px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+nav ul li a:hover{
+  background-color: #5215ae;
+  color: white;
+  padding: 7px;
+  border-radius: 5%;
+
+}
+
+.contact-button {
+  background: #5215ae;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 40px 20px;
+  background: #f8f9fa;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.hero-text h1 span {
+  color: #5215ae;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.start-button {
+  background: #5215ae;
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: large;
+}
+
+.start-button:hover {
+  background-color: #950df7;
+  color:#ffffff
+}
+
+.start-button:active {
+  background-color: #4b0082;
+  color: white;
+}
+
+.hero-image img {
+  max-width: 80%;
+  height: auto;
+}
