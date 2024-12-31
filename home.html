@@ -5,6 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Revolutionizing the IT Industry</title>
   <link rel="stylesheet" href="stylele.css">
+  <style>
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .contact-button {
+        padding: 10px 10px;
+        font-size: 14px;
+      }
+    }
+    @media (min-width: 769px) {
+      .menu-toggle {
+        display: none;
+      }
+      nav ul {
+        display: flex !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -16,7 +44,8 @@
         <li><a href="#">Blog</a></li>
         <li><a href="#">Projects</a></li>
       </ul>
-      <a href="#" class="contact-button">Contact us</a>
+      <a href="contactform.html" class="contact-button">Contact us</a>
+      <div class="menu-toggle">&#9776;</div>
     </nav>
   </header>
 
@@ -27,9 +56,14 @@
       <button class="start-button">Let's get started!</button>
     </div>
     <div class="hero-image">
-      
       <img src="landing.jpeg" alt="Illustration">
     </div>
   </section>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
